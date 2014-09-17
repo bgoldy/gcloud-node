@@ -115,7 +115,7 @@
       },
       {
         "type": "example",
-        "string": "// List all companies named Google that have less than 400 employees.\nvar companyQuery = query\n  .filter('name =', 'Google');\n  .filter('size <', 400);\n\n// To filter by key, use `__key__` for the property name. Filter on keys\n// stored as properties is not currently supported.\nvar keyQuery = query.filter('__key__ =', dataset.key('Company', 'Google'));"
+        "string": "// List all companies named Google that have less than 400 employees.\nvar companyQuery = query\n  .filter('name =', 'Google');\n  .filter('size <', 400);\n\n// To filter by key, use `__key__` for the property name. Filter on keys\n// stored as properties is not currently supported.\nvar keyQuery = query.filter('__key__ =', dataset.key(['Company', 'Google']));"
       }
     ],
     "description": {
@@ -154,7 +154,7 @@
       },
       {
         "type": "example",
-        "string": "var ancestoryQuery = query.hasAncestor(dataset.key('Parent', 123));"
+        "string": "var ancestoryQuery = query.hasAncestor(dataset.key(['Parent', 123]));"
       }
     ],
     "description": {
